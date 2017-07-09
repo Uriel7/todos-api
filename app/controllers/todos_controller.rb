@@ -20,8 +20,7 @@ class TodosController < ApplicationController
   # PUT /todos/:id
   def update
     @todo.update(todo_params)
-    json_response(@todo, :updated)
-    #head :no_content
+    head :no_content
   end
 
   # DELETE /todos/:id

@@ -57,7 +57,7 @@ RSpec.describe 'Todos API', type: :request do
     context 'when the request is valid' do
       before { post '/todos', params: valid_attributes }
 
-      it 'creates a to do' do
+      it 'creates a todo' do
         expect(json['title']).to eq('Learn Elm')
       end
 
@@ -91,7 +91,7 @@ RSpec.describe 'Todos API', type: :request do
         expect(response.body).to be_empty
       end
 
-      it 'retunrs the status code 204' do
+      it 'retunrs status code 204' do
         expect(response).to have_http_status(204)
       end
     end
